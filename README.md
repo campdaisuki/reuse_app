@@ -12,7 +12,7 @@
 ### Association
 
 - has_many :items
-- has_many :taker
+- has_many :history
 
 ## items テーブル
 
@@ -27,9 +27,9 @@
 ### Association
 
 - belongs_to :user
-- has_one :taker
+- has_one :history
 
-## destinations テーブル
+## takers テーブル
 
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
@@ -41,14 +41,14 @@
 | phone_number       | string | null: false |
 | receip_day_id      | integer | null: false |
 | receive_id         | integer | null: false |
-| takert             | references | null: false, foreign_key: true |
+| history            | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :taker
+- belongs_to :history
 
 
-## takers テーブル
+## historys テーブル
 
 | Column             | Type      | Options     |
 | ------------------ | --------- | ----------- |
@@ -57,6 +57,6 @@
 
 ### Association
 
-- has_one :destination
+- has_one :taker
 - belongs_to :item
 - belongs_to :user
