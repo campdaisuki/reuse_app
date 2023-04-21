@@ -6,4 +6,13 @@ class ItemsController < ApplicationController
   def new
     @item = Item.new
   end
+
+  def create
+    Item.create(item_params)
+  end
+
+  private
+  def item_params
+    params.require(:item).permit(:name, :image, :text, :condition_id, :receive_id)
+  end
 end
