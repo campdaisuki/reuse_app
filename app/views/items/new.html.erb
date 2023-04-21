@@ -1,0 +1,28 @@
+<div class="contents row">
+  <div class="container">
+    <h3>出品する</h3>
+    <%= form_with(model: @item, local: true) do |form| %>
+      <div class="weight-bold-text">
+          <span class="indispensable">Nickname</span>
+          <%= form.text_field :name, placeholder: "<必須>" %>
+      </div>
+      <div class="weight-bold-text">
+          <span class="indispensable">画像</span>
+          <%= form.text_field :image, placeholder: "<必須>" %>
+      </div>
+      <div class="weight-bold-text">
+          <span class="indispensable">商品について</span>
+          <%= form.text_area :text, placeholder: "<必須>", rows: "10" %>
+      </div>
+      <div class="weight-bold-text">
+          <span class="indispensable">状態</span>
+          <%= form.text_field :condition, placeholder: "<必須>" %>
+      </div>
+      <div class="weight-bold-text">
+          <span class="indispensable">受け取り方法</span>
+          <%= form.text_field :receive, placeholder: "<必須>" %>
+      </div>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>
