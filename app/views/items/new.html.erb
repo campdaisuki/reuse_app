@@ -7,8 +7,8 @@
           <%= form.text_field :name, placeholder: "<必須>" %>
       </div>
       <div class="weight-bold-text">
-          <span class="indispensable">画像</span>
-          <%= form.text_field :image, placeholder: "<必須>" %>
+          <span class="indispensable">クリックしてファイルをアップロード</span>
+          <%= form.file_field :image, id:"item-image" %>
       </div>
       <div class="weight-bold-text">
           <span class="indispensable">商品について</span>
