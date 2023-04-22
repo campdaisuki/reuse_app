@@ -16,11 +16,11 @@
       </div>
       <div class="weight-bold-text">
           <span class="indispensable">状態</span>
-          <%= form.text_field :condition, placeholder: "<必須>" %>
+         <%= form.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"genre-select"}) %>
       </div>
       <div class="weight-bold-text">
           <span class="indispensable">受け取り方法</span>
-          <%= form.text_field :receive, placeholder: "<必須>" %>
+          <%= form.collection_select(:receive_id, Receive.all, :id, :name, {}, {class:"genre-select"}) %>
       </div>
       <%= form.submit "SEND" %>
     <% end %>
